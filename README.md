@@ -35,3 +35,14 @@
    número de funciones, como registro, limpieza de formularios, creación de
    reportes y lo necesario para el funcionamiento correcto de una clinica con su
    fácil compresión y complementación en la misma.
+
+# Capturas
+
+Se agregarán capturas de algunas pantallas que se encuentran en el sistema
+
+
+![Login 2](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/b8c14f39-f617-4261-beb4-8ece50b59ee9)
+
+![Login 1](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/83cc206b-0133-4d40-9b07-526c12afbf1d)
+
+
