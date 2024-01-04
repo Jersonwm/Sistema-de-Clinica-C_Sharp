@@ -50,16 +50,19 @@ Se agregarán capturas de algunas pantallas que se encuentran en el sistema
 # Principales 
 
 Empleada
+
 ![Pantalla empleada](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/e654e1e2-49a7-4aac-becf-bbb838dda860)
 
 Doctor
+
 ![Pantalla Doctor](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/d5343cc4-47a7-436c-9105-0599cfcaeabf)
 
 Dueño
+
 ![Pantalla Dueño](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/2dd774a5-18a3-4dd1-9fd6-aa3b1606f11c)
 
 
-#Otras pantallas
+# Otras pantallas
 
 ![Pantalla Dueño-Empleados](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/f6a9772f-c020-48e2-a9e7-999386600afa)
 
