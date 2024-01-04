@@ -38,11 +38,34 @@
 
 # Capturas
 
+
 Se agregarán capturas de algunas pantallas que se encuentran en el sistema
 
+# Carga
 
 ![Login 2](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/b8c14f39-f617-4261-beb4-8ece50b59ee9)
 
 ![Login 1](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/83cc206b-0133-4d40-9b07-526c12afbf1d)
 
+# Principales 
+
+Empleada
+![Pantalla empleada](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/e654e1e2-49a7-4aac-becf-bbb838dda860)
+
+Doctor
+![Pantalla Doctor](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/d5343cc4-47a7-436c-9105-0599cfcaeabf)
+
+Dueño
+![Pantalla Dueño](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/2dd774a5-18a3-4dd1-9fd6-aa3b1606f11c)
+
+
+#Otras pantallas
+
+![Pantalla Dueño-Empleados](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/f6a9772f-c020-48e2-a9e7-999386600afa)
+
+![Pantalla Expediente](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/461ab480-5f49-488b-abfa-0b7711556124)
+
+![Pantallas Citas](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/7513b912-091a-46b8-8a64-ae7c33157cdd)
+
+![Pantalla Factura](https://github.com/Jersonwm/Sistema-de-Clinica-C_Sharp/assets/9126710/35f8f157-31a9-4342-96f1-9810826a7b57)
 
