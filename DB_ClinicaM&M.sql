@@ -1,0 +1,105 @@
+CREATE DATABASE ClinicaMyM
+GO
+
+USE ClinicaMyM
+GO
+
+CREATE TABLE Empleado
+(
+id_empleado INT NOT NULL IDENTITY CONSTRAINT pk_idEmpleado PRIMARY KEY,
+nombreEmp VARCHAR(50) NOT NULL,
+apellidoEmp VARCHAR(50) NOT NULL,
+cargoEmp VARCHAR(25) NOT NULL,
+fechaNacEmp DATE NOT NULL,
+fechaContratEmp DATE NOT NULL,
+estadoEmp VARCHAR(25) NOT NULL,
+usuario varchar(15) NOT NULL,
+contraseña varchar(MAX) NOT NULL
+)
+GO
+
+CREATE TABLE Paciente
+(
+id_paciente INT NOT NULL IDENTITY CONSTRAINT pk_idCliente PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+apellido VARCHAR(50) NOT NULL,
+fechaNacPaci DATE NOT NULL,
+direccion VARCHAR(100) NOT NULL
+)
+GO
+
+CREATE TABLE Producto
+(
+id_producto INT NOT NULL IDENTITY CONSTRAINT pk_idProducto PRIMARY KEY,
+nombreProd VARCHAR(50) NOT NULL,
+descripcionProd VARCHAR(100),
+cantidadProd INT NOT NULL
+)
+GO
+
+CREATE TABLE Servicio
+(
+id_servicio INT NOT NULL IDENTITY CONSTRAINT pk_idServicio PRIMARY KEY,
+nombreServ VARCHAR(50) NOT NULL,
+descripcionServ VARCHAR(100) NOT NULL,
+precioServ MONEY NOT NULL
+)
+GO
+
+CREATE TABLE Detalle_Servicio
+(
+id_detalleServ INT NOT NULL IDENTITY CONSTRAINT pk_idDetalleServ PRIMARY KEY,
+id_Servicio INT CONSTRAINT fk_servicioDetalleServ FOREIGN KEY REFERENCES Servicio(id_servicio) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Producto INT CONSTRAINT fk_productoDetalleServ FOREIGN KEY REFERENCES Producto(id_producto) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Cita 
+(
+id_cita INT NOT NULL IDENTITY CONSTRAINT pk_idCita PRIMARY KEY,
+fechaCita DATE NOT NULL,
+horaCita TIME NOT NULL,
+id_Paciente INT NOT NULL CONSTRAINT fk_pacienteCita FOREIGN KEY REFERENCES Paciente(id_paciente) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Empleado INT NOT NULL CONSTRAINT fk_empleadoCita FOREIGN KEY REFERENCES Empleado(id_empleado) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Detalle_Cita
+(
+id_Detallecita INT NOT NULL IDENTITY CONSTRAINT pk_idDetalleCita PRIMARY KEY,
+id_Cita INT CONSTRAINT fk_citaDetalleCita FOREIGN KEY REFERENCES Cita(id_cita) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Servicio INT CONSTRAINT fk_servicioDetalleCita FOREIGN KEY REFERENCES Servicio(id_servicio) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Expediente
+(
+id_expediente INT NOT NULL IDENTITY CONSTRAINT pk_idExpediente PRIMARY KEY,
+diagnostico VARCHAR(150) NOT NULL,
+recomendacion VARCHAR(300) NOT NULL,
+receta VARCHAR(300),
+notaAdici VARCHAR(300),
+id_Cita INT NOT NULL CONSTRAINT fk_citaExpediente FOREIGN KEY REFERENCES Cita(id_cita),
+id_Paciente INT NOT NULL CONSTRAINT fk_pacienteExpediente FOREIGN KEY REFERENCES Paciente(id_paciente) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Empleado INT NOT NULL CONSTRAINT fk_empleadoExpediente FOREIGN KEY REFERENCES Empleado(id_empleado) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Factura
+(
+id_factura INT NOT NULL IDENTITY CONSTRAINT pk_idFactura PRIMARY KEY,
+fechaHoraFact DATETIME NOT NULL,
+tipoPago VARCHAR(20) NOT NULL,
+id_Paciente INT NOT NULL CONSTRAINT fk_pacienteFactura FOREIGN KEY REFERENCES Paciente(id_paciente) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Empleado INT NOT NULL CONSTRAINT fk_empleadoFactura FOREIGN KEY REFERENCES Empleado(id_empleado) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
+
+CREATE TABLE Detalle_Factura
+(
+id_detalleFac INT NOT NULL IDENTITY CONSTRAINT pk_idDetalleFactura PRIMARY KEY,
+cantidad INT NOT NULL,
+id_Factura INT CONSTRAINT fk_facturaDetalleFactura FOREIGN KEY REFERENCES Factura(id_factura) ON UPDATE CASCADE ON DELETE CASCADE,
+id_Servicio INT CONSTRAINT fk_servicioDetalleFactura FOREIGN KEY REFERENCES Servicio(id_servicio) ON UPDATE CASCADE ON DELETE CASCADE
+)
+GO
